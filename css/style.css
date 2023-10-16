@@ -1,0 +1,361 @@
+/* Reset some default styles for browsers */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins&family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Oxygen&family=Poppins&family=Roboto&display=swap');
+
+body {
+    background: url('/raw/bg.svg') no-repeat center center/cover;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Inconsolata', monospace; */
+    font-family: 'Oxygen', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+header { /* Set header element style */
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.main_color { /* Global class color set */
+    color: #4fb2b0;
+}
+
+#name_tag { /* Set style of name */
+    color: #e6e6e6;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.gitIcon {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent; /* Adjust the size of the triangle as needed */
+    border-right: 60px solid transparent; /* Adjust the size of the triangle as needed */
+    border-bottom: 97px solid #3498db; /* Triangle color */
+    position: fixed;
+    top: -39.8px; /* Distance from the top of the viewport */
+    left: -22px; /* Distance from the left of the viewport */
+    transform: rotate(80deg); /* Rotate the triangle by 45 degrees */
+    z-index: 2;
+}
+
+.navbar { /* Set display to flex so that they are lined horizontally */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+
+ul.nav-links {
+    list-style: none; /* Remove bullet points */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding-top: 4px;
+}
+
+ul.nav-links li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 40px; /* Add spacing between list items */
+}
+
+ul.nav-links li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #bebebe; /* Set link color */
+}
+
+.content {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero_img_tag {
+    width: 400px;
+    height: 220px;
+    background: url('/raw/hero_img.png') no-repeat center center/cover;
+}
+
+.p_positionTitle, .p_Name , .p_desc {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.p_positionTitle {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.p_Name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e6e6e6;
+}
+
+.p_desc {
+    width: 300px;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    padding-bottom: 15px;
+}
+
+.button_hireMe {
+    padding: 8px 60px;
+    background: none;
+    border: 2px solid #4fb2b0;
+    font-weight: bolder;
+    color: #4fb2b0;
+}
+
+
+._about {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.rowDesign_front, .rowDesign_back {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.rowDesign_front {
+    margin-top: 1em;
+    height: 600px;
+}
+
+.rowDesign_back {
+    height: 700px;
+}
+
+._aboutContent {
+    position: absolute;
+    /* top: 200;
+    left: 250; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+}
+
+.devImage {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.left_AboutContent {
+    text-align: center;
+}
+
+.about_devName {
+    font-weight: bold;
+    color: #e6e6e6;
+    font-size: 1.5rem;
+}
+
+.imgDev_container {
+    width: 180px; /* Set a fixed width for the circular container */
+    height: 180px; /* Set a fixed height for the circular container */
+    border: 5px solid #4fb2b0;
+    border-radius: 50%; /* Make the outer border circular */
+    overflow: hidden; /* Hide the parts of the image outside the circle */
+    padding: 8px; /* Adjust the padding to create a gap between the border and the image */
+
+}
+
+.socialIcons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 180px;
+    margin: 0 auto;
+    color: #4fb2b0;
+}
+
+.right_AboutContent {
+    width: 500px;
+    color: #e6e6e6;
+}
+
+.main_titleAbout, .main_titleSkills {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    color: #e6e6e6;
+}
+
+.sub_TitleAbout {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.about_desc {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+._skills {
+    padding-top: 750px;
+    text-align: center;
+    padding-bottom: 10em;
+}
+
+.skills_iconContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 130px;
+    padding-right: 130px;
+    justify-content: center;
+}
+
+.svgIcon_Title {
+    color: #e6e6e6;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.skill_block {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icon_wrapper {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 10px;
+    background-color: #181e27;
+    border-radius: 10px;
+}
+
+.progress {
+    background-color: orange;
+    /* width: 10px; */
+    height: 10px;
+    border-radius: 10px;
+}
+
+.pHtml {
+    width: 90px;
+    background-color: #e44d26;
+}
+
+.pCSS {
+    width: 80px;
+    background-color: #1f62ae;
+}
+
+.pJS {
+    width: 80px;
+    background-color: #f0db4f;
+}
+
+.pIBMMQ {
+    width: 80px;
+    background-color: #adada9;
+}
+
+.pNodeJs {
+    width: 60px;
+    background-color: #539e43;
+}
+
+.pJava {
+    width: 70px;
+    background-color: #f8981d;
+}
+
+.pSpring {
+    width: 70px;
+    background-color: #8bc34a;
+}
+
+
+.pSQL {
+    width: 70px;
+    background-color: #157efb;
+}
+
+.pReact {
+    width: 30px;
+    background-color: #61dafb;
+}
+
+.pFirebase {
+    width: 50px;
+    background-color: #ffc400;
+}
+
+.pAWS {
+    width: 40px;
+    background-color: #3661ff;
+}
+
+.pGoogleCloud {
+    width: 40px;
+    background-color: #1976d2;
+}
+
+
+.pTomcat {
+    width: 40px;
+    background-color: #d1a41a;
+}
+
+._works {
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 1050px) {
+    /* Styles for standard screens */
+    .hero_img_tag {
+        width: 600px;
+        height: 400px;
+    }
+    
+    .p_positionTitle {
+        font-size: 0.8rem;
+    }
+    
+    .p_Name {
+        font-size: 3rem;
+    }
+    
+    .p_desc {
+        width: 300px;
+        font-size: 0.9rem;
+        padding-bottom: 15px;
+    }
+
+}
