@@ -5,6 +5,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Oxygen&family=Poppins&family=Roboto&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background: url('/raw/bg.svg') no-repeat center center/cover;
     /* font-family: 'Roboto', sans-serif; */
@@ -18,7 +22,8 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    /* position: relative; */
     letter-spacing: 1px;
 }
 
@@ -77,7 +82,9 @@ header { /* Set header element style */
 
 ul.nav-links {
     list-style: none; /* Remove bullet points */
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    opacity: 0.9;
     letter-spacing: 1px;
     padding-top: 4px;
 }
@@ -90,6 +97,27 @@ ul.nav-links li {
 ul.nav-links li a {
     text-decoration: none; /* Remove underline from links */
     color: #bebebe; /* Set link color */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black; /* Set the default text color */
+    position: relative;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    width: 0;
+    height: 4px; /* Set the height and color of the underline */
+    background-color: #4fb2b0; /* Set the color of the underline */
+    transition: width 0.3s ease; /* Add a transition for smooth animation */
+}
+
+.nav-links li a:hover::before {
+    width: 100%; /* Expand the underline to 100% width on hover */
 }
 
 .content {
@@ -143,7 +171,7 @@ ul.nav-links li a {
 ._about {
     position: relative;
     margin-top: 100px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .rowDesign_front, .rowDesign_back {
@@ -151,6 +179,7 @@ ul.nav-links li a {
     left: 0;
     right: 0;
     width: 100%;
+    z-index: -1;
 }
 
 .rowDesign_front {
@@ -183,15 +212,14 @@ ul.nav-links li a {
 }
 
 ._aboutContent {
-    position: absolute;
-    /* top: 200;
-    left: 250; */
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 60%);
+    transform: translate(-50%, 60%); */
     display: flex;
-    width: 900px;
-    justify-content: space-between;
+    /* width: 100%; */
+    justify-content: space-evenly;
+    padding-top: 170px;
 }
 
 .devImage {
@@ -253,9 +281,10 @@ ul.nav-links li a {
 }
 
 ._skills {
-    padding-top: 750px;
+    margin-top: 180px;
     text-align: center;
     padding-bottom: 10em;
+    padding-top: 130px;
 }
 
 .skills_iconContainer {
@@ -330,7 +359,7 @@ ul.nav-links li a {
 }
 
 .pSpring {
-    width: 70px;
+    width: 78px;
     background-color: #8bc34a;
 }
 
@@ -367,10 +396,8 @@ ul.nav-links li a {
 }
 
 ._works {
-    position: absolute;
-    top: 160%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -466,10 +493,12 @@ ul.nav-links li a {
 }
 
 ._contactInfo {
-    position: absolute;
-    top: 265%;
+    /* position: absolute;
+    top: 275%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); */
+    margin-left: auto;
+    margin-right: auto;
     width: 70%;
     padding-bottom: 60px;
     color: #d1d1d1;
@@ -512,10 +541,10 @@ ul.nav-links li a {
 .footer {
     padding: 6px;
     background-color: #181e27;
-    position: absolute;
-    bottom: -260%;
+    /* position: absolute;
+    bottom: -265%; */
     text-align: center;
-    width: 100vw;
+    width: 100%;
     color: #5b6675;
     font-size: 0.8rem;
 }
@@ -530,7 +559,7 @@ ul.nav-links li a {
     color: #fff;
     font-size: 1.3rem;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 1000;
     display: flex;
@@ -579,6 +608,32 @@ body.show-scrollbar {
     }
 }
 
+/* .underscoreBlinking {
+    width: 15px;
+    height: 1px;
+    border: 1px solid #e6e6e6;
+    background-color: #e6e6e6;
+} */
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.underscoreBlinking {
+    display: inline-block;
+    width: 10px; /* Adjust the width of the underline */
+    height: 2px; /* Adjust the height/thickness of the underline */
+    background-color: #e6e6e6;; /* Adjust the color of the underline */
+    animation: blink 1s infinite; /* Blinking animation every 1 second */
+}
 
 
 @media (min-width: 1050px) {
@@ -602,4 +657,214 @@ body.show-scrollbar {
         padding-bottom: 15px;
     }
 
+}
+
+
+@media (max-width: 985px) {
+    /* Styles for standard screens */
+
+    ._aboutContent {
+        /* background-color: red; */
+        flex-direction: column-reverse;
+        align-items: center;
+        /* transform: translate(-50%, 40%); */
+    }
+
+    .rowDesign_front {
+        height: 950px;
+    }
+
+    .rowDesign_back {
+        height: 870px;
+    }
+
+    .left_AboutContent {
+        margin-top: 30px;
+    }
+
+
+}
+
+
+@media (max-width: 430px) {
+    /* Styles for standard screens */
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+    body {
+        width: 100% !important;
+    }
+
+    .content {
+        /* width: 100%; */
+        display: flex;
+        margin: 0 auto;
+        margin-top: 100px;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 30px;
+        /* background-color: pink; */
+    }    
+
+    .hero_img_tag {
+        margin-top: 30px;
+        /* width: 250px;
+        height: 240px; */
+        margin-bottom: 30px;
+    }
+
+    .desc_text {
+        width: 100%;
+        padding-top: 30px;
+        /* padding-left: 50px; */
+    }
+
+    .right_AboutContent  {
+        width: 350px;
+    }
+
+    .rowDesign_back, .rowDesign_front {
+        width: 100vw;
+    }
+
+    .imgDev_container, .devImage {
+        width: 130px;
+        height: 130px;
+    }
+
+    .left_AboutContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills_iconContainer {
+        padding: 0 !important;
+    }
+
+    ._skills {
+        margin-top: 100px;
+    }
+
+/* SKILLS CSS ----------------*/
+
+    .pHtml {
+        width: 60px;
+        background-color: #e44d26;
+    }
+    
+    .pCSS {
+        width: 60px;
+        background-color: #1f62ae;
+    }
+    
+    .pJS {
+        width: 60px;
+        background-color: #f0db4f;
+    }
+    
+    .pIBMMQ {
+        width: 50px;
+        background-color: #adada9;
+    }
+    
+    .pNodeJs {
+        width: 55px;
+        background-color: #539e43;
+    }
+    
+    .pJava {
+        width: 55px;
+        background-color: #f8981d;
+    }
+    
+    .pSpring {
+        width: 55px;
+        background-color: #8bc34a;
+    }
+    
+    
+    .pSQL {
+        width: 50px;
+        background-color: #157efb;
+    }
+    
+    .pReact {
+        width: 20px;
+        background-color: #61dafb;
+    }
+    
+    .pFirebase {
+        width: 30px;
+        background-color: #ffc400;
+    }
+    
+    .pAWS {
+        width: 30px;
+        background-color: #f7a80d;
+    }
+    
+    .pGoogleCloud {
+        width: 30px;
+        background-color: #1976d2;
+    }
+    
+    
+    .pTomcat {
+        width: 20px;
+        background-color: #d1a41a;
+    }
+
+    .progress-bar {
+        width: 70px;
+        height: 7px;
+    }
+
+    .progress {
+        height: 7px;
+    }
+
+    .onMobileViewSVGSkills {
+        height: 50px !important;
+    }
+
+    .skill_block {
+        width: 90px;
+        margin-top: 30px;
+    }
+
+    ._works {
+        /* position: static; */
+        margin-top: -90px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+
+    }
+
+    .projectsContainer {
+        width: 300px;
+    }
+
+    .projectBlock {
+        margin-bottom: 50px;
+    }
+
+    .customTool {
+        margin-top: 0 !important;
+    }
+
+    ._contactInfo {
+        /* top: 515%; */
+        margin-top: -80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ._aboutContent {
+        padding-top: 220px;
+    }
 }
