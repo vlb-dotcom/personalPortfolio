@@ -586,21 +586,25 @@ ul.nav-links li a {
 
 .socialMedia_container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .contact_infoBlock {
-    width: 90%;
-    margin: 20px;
+    /* width: 90%; */
+    /* margin: 20px; */
     display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 70px;
+    margin-top: 15px;
 }
 
 .socialMedia_icon {
     font-size: 2rem;
     color: #4fb2b0;
+    margin-bottom: 5px;
     /* font-weight: bolder; */
 }
 
@@ -732,8 +736,11 @@ body.show-scrollbar {
 
 .socialMedia_container {
     /* background-color: #181e27; */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row !important; */
     border-radius: 5px;
-    width: 40%;
+    width: 100%;
 }
 
 .contact_form {
@@ -763,13 +770,10 @@ body.show-scrollbar {
     margin-bottom: 20px;
 }
 
-.contactFieldInput {
-    /* border-radius: 0;
-    border-radius: 0px !important;
-    background: none !important;
-    border: 2px solid #4fb2b0 !important;
-    color: #fff !important; */
+.button_hireMe:hover {
+    cursor: pointer;
 }
+
 
 @media  (max-width: 1325px) {
 
@@ -1241,6 +1245,17 @@ body.show-scrollbar {
 
     #name_tag {
         margin-left: -50px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    
+    .socialMedia_container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }

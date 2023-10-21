@@ -84,3 +84,9 @@ const launchInDevModalEl = document.querySelectorAll(".btnInDevModal");
 const inDevA = document.querySelector(".button_hireMe");
 
 inDevA.addEventListener("click", (event) => {});
+
+function candlyPopup() {
+  const candlyElement = document.querySelector(".aTag_candedly");
+
+  candlyElement.click();
+}
