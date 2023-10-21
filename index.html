@@ -8,21 +8,66 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
-  <body>
+  <body>      
 
-    <!-- <div class="initialView">LLoyd Barrera <span class="initialViewPortfolio"> &nbsp;Portfolio</span></div> -->
-
-    <div class="initialView">
+    <!-- <div class="initialView">
         <div class="fade-out">LLoyd Barrera</div>
         <div class="fade-out initialViewPortfolio">&nbsp; Portfolio</div>
-    </div> 
+    </div>  -->
 
-    <div onclick="window.open('https://github.com/vlb-dotcom', '_blank');" class="gitIcon">
-        <i class="fa-brands fa-github topLeftGit_icon"></i>
-    </div>
+    <!-- <div class="gitIcon">
+        <div class="triangleBackground"></div>
+        <i onclick="window.open('https://github.com/vlb-dotcom', '_blank');" class="fa-brands fa-github topLeftGit_icon"></i>
+    </div> -->
 
     <header>
+        <nav class="navbar">
+            <div class="logo_tag">
+                <span id="name_tag">vlb-dotcom <span class="underscoreBlinking"></span></span>
+            </div>
+            <div class="navbar-toggle" id="navbarToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="navbarLinks">
+                <li class="navbar_linkItem"><a href="#__about">About</a></li>
+                <li class="navbar_linkItem"><a href="#__skills">Skills</a></li>
+                <li class="navbar_linkItem"><a href="#__works">Work</a></li>
+                <li class="navbar_linkItem"><a href="#__contactInfo">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<!-- Modal -->
+    <div class="modal fade" id="modalInDevelopment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button> -->
+                </div>
+                <div class="modal-body">
+                    🔧 Hold on to your hats! The magic is brewing, but our tech wizards are still perfecting the spell. Stay tuned for the enchantment! ✨🚀 #WorkInProgress
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btnInDevModal hidden" data-toggle="modal" data-target="#modalInDevelopment">
+    Launch demo modal
+</button>
+    
+
+    <!-- <header>
       <nav class="navbar">
         <div class="logo_tag">
           <span id="name_tag">vlb-dotcom <span class="underscoreBlinking"></span></span>
@@ -34,7 +79,7 @@
           <li><a href="#__contactInfo">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <main class="content">
       <div class="desc_text">
@@ -286,9 +331,9 @@
         <div class="projectsContainer">
             <div class="projectBlock">
                 <div class="projectBlockBorderTop"></div>
-                <p class="projectTitle">CMS Application with Messenger Integration</p>
+                <p class="projectTitle">ShapeSync Pro</p>
                 <img class="project_image" src="./raw/projectImages/cmsApplication.PNG"/>
-                <p class="project_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, suscipit ratione. Veniam, nesciunt velit commodi fugit alias illum maiores ipsam recusandae soluta ea at blanditiis minima cupiditate officiis adipisci nostrum!</p>
+                <p class="project_desc">The CMS Application with Messenger Integration effortlessly handles participant data from Messenger, delivering real-time notifications to users whenever updates occur, enhancing communication efficiency.</p>
                 <div class="project_usedTools">
                     <div class="projectTool_item">Html</div>
                     <div class="projectTool_item">Css</div>
@@ -305,9 +350,9 @@
             </div>
             <div class="projectBlock">
                 <div class="projectBlockBorderTop"></div>
-                <p class="projectTitle customTool" style="margin-top: -60px;">Custome Tool Connector</p>
+                <p class="projectTitle customTool" style="margin-top: -60px;">Integrify Pro</p>
                 <img class="project_image" style="border-radius: 10px;" src="./raw/projectImages/customConnectorFront.PNG"/>
-                <p class="project_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, suscipit ratione. Veniam, nesciunt velit commodi fugit alias illum maiores ipsam recusandae soluta ea at blanditiis minima cupiditate officiis adipisci nostrum!</p>
+                <p class="project_desc">The Custom Tool Connector is a dynamic application that efficiently integrates data from diverse external and internal applications via APIs, enhancing connectivity and optimizing operations for enhanced efficiency.</p>
                 <div class="project_usedTools">
                     <div class="projectTool_item">Html</div>
                     <div class="projectTool_item">Css</div>
@@ -339,12 +384,35 @@
                 <br>
                 <br>
                 Don't hesitate to get in touch!
+
+                <div class="bookWithMe_container">
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a class="aTag_candedly" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barrera-vincentlloyd/30min'});return false;">Schedule a time with me</a>
+                </div>
             </div>
-            <div class="socialMedia_container">
-                <div class="contact_infoBlock"><i class="fa-solid fa-phone socialMedia_icon"></i> <span class="contact_value">+63 920 817 9016</span></div>
-                <div class="contact_infoBlock"><i class="fa-solid fa-envelope socialMedia_icon"></i><span class="contact_value">barrera.vincentlloyd@gmail.com</span> </div>
-                <div class="contact_infoBlock"><i class="fa-brands fa-github socialMedia_icon"></i> <span class="contact_value">https://github.com/vlb-dotcom</span></div>
-                <div class="contact_infoBlock"> <i class="fa-brands fa-linkedin socialMedia_icon"></i> <span class="contact_value">https://</span></div>
+            <div class="contactActionContainer">
+                <div class="socialMedia_container">
+                    <div class="contact_infoBlock"><i class="fa-solid fa-phone socialMedia_icon"></i> <span class="contact_value">+63 920 817 9016</span></div>
+                    <div class="contact_infoBlock"><i class="fa-solid fa-envelope socialMedia_icon"></i><span class="contact_value">barrera.vincentlloyd@gmail.com</span> </div>
+                    <div class="contact_infoBlock"><i class="fa-brands fa-github socialMedia_icon"></i> <span class="contact_value">https://github.com/vlb-dotcom</span></div>
+                    <div class="contact_infoBlock"> <i class="fa-brands fa-linkedin socialMedia_icon"></i> <span class="contact_value">https://</span></div>
+                </div>
+                <!-- <form class="contact_form">
+                    <div class="form-group">
+                        <label class="contactFieldLabel" for="exampleFormControlInput1">Name*</label>
+                        <input type="text" class="form-control contactFieldInput" id="exampleFormControlInput1" required placeholder="Your Name">
+                      </div>
+                    <div class="form-group">
+                      <label class="contactFieldLabel" for="exampleFormControlInput1">Email*</label>
+                      <input type="email" class="form-control contactFieldInput" id="exampleFormControlInput1" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label class="contactFieldLabel" for="exampleFormControlTextarea1">Message*</label>
+                      <textarea class="form-control contactFieldInput" id="exampleFormControlTextarea1" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Send Message</button>
+                  </form> -->
             </div>
         </div>
     </div>
@@ -355,7 +423,9 @@
 
     
     <script src="./js/script.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
      <script
       src="https://kit.fontawesome.com/348d8a875d.js"
       crossorigin="anonymous"
