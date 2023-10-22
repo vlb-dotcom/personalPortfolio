@@ -555,6 +555,8 @@ ul.nav-links li a {
 
 .btn_projectView:hover {
     cursor: pointer;
+    background-color: #4fb2b0; 
+    color: #181e27;
 }
 
 .projectTool_item {
@@ -669,6 +671,8 @@ body.show-scrollbar {
 .aTag_candedly:hover {
     color: #4fb2b0;
     text-decoration: none;
+    background-color: #4fb2b0; 
+    color: #181e27;
 }
 
 @keyframes fadeIn {
@@ -777,6 +781,8 @@ body.show-scrollbar {
 
 .button_hireMe:hover {
     cursor: pointer;
+    background-color: #4fb2b0;
+    color: #181e27;
 }
 
 
