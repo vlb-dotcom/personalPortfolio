@@ -551,6 +551,7 @@ ul.nav-links li a {
     position: absolute;
     bottom: 2%;
     width: 83.7%;
+    left: 8%;
 }
 
 .btn_projectView:hover {
@@ -595,6 +596,7 @@ ul.nav-links li a {
     /* justify-content: space-between; */
     margin-top: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .contact_infoBlock {
@@ -606,6 +608,12 @@ ul.nav-links li a {
     width: 80px;
     margin-top: 15px;
     text-align: center;
+    transition: all .2s ease-in-out; 
+}
+
+.contact_infoBlock:hover {
+    cursor: pointer;
+    transform: scale(1.1); 
 }
 
 .socialMedia_icon {
@@ -618,6 +626,7 @@ ul.nav-links li a {
 .contact_value {
     font-size: 0.9rem;
     /* margin-left: 10px; */
+    color: #fff;
     opacity: 0.5;
 }
 
@@ -785,6 +794,44 @@ body.show-scrollbar {
     color: #181e27;
 }
 
+.projectNoticeText {
+    font-size: 0.9rem;
+    font-weight: lighter;
+    opacity: 0.8;
+    color: #fff;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.fa-circle-exclamation {
+    color: #4fb2b0;
+    font-size: 1.2rem;
+    padding-right: 5px;
+}
+
+.socialIcon_aTag {
+    color: #4fb2b0;
+}
+
+.headerSocialIcons {
+    transition: all .2s ease-in-out; 
+}
+
+.headerSocialIcons:hover {
+    color: #4fb2b0;
+    cursor: pointer;
+    transform: scale(1.3); 
+}
+
+.socialMedia_ContactDetailsATag {
+    /* color: #4fb2b0; */
+    text-decoration: none;
+}
+
+.socialMedia_ContactDetailsATag:hover {
+    /* color: #4fb2b0; */
+    text-decoration: none !important;
+}
 
 @media  (max-width: 1325px) {
 
@@ -897,6 +944,11 @@ body.show-scrollbar {
 
     .projectsContainer {
         width: 90% !important;
+    }
+
+    .projectNoticeText {
+        width: 480px;
+        text-align: justify;
     }
 }
 
@@ -1258,7 +1310,18 @@ body.show-scrollbar {
         margin-left: -50px;
     }
 
+    .projectNoticeText {
+        width: 100%;
+    }
+
 }
+
+@media (max-width: 640px) {
+    .projectNoticeText {
+        margin-bottom: 80px;
+    }
+}
+
 
 @media (max-width: 474px) {
     
@@ -1267,6 +1330,12 @@ body.show-scrollbar {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .aTag_candedly {
+        padding: 8px;
+        width: 100%;
+        font-size: 12px;
     }
 
 }
@@ -1279,5 +1348,11 @@ body.show-scrollbar {
     .skills_iconContainer {
         width: 350px;
         margin: 0 auto;
+    }
+
+    .aTag_candedly {
+        padding: 8px;
+        width: 100%;
+        font-size: 12px;
     }
 }
