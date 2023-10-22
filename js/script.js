@@ -90,3 +90,9 @@ function candlyPopup() {
 
   candlyElement.click();
 }
+
+function popUpProjectDemo() {
+  const candlyElement = document.querySelector(".aTag_ProjectDemo");
+
+  candlyElement.click();
+}

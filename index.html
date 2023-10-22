@@ -346,7 +346,7 @@
                     <div class="projectTool_item">uChat</div>
                     <div class="projectTool_item">Bootstrap</div>
                 </div>
-                <button class="btn_projectView">Request Demo</button>
+                <button onclick="popUpProjectDemo()" class="btn_projectView">Request Demo</button>
             </div>
             <div class="projectBlock">
                 <div class="projectBlockBorderTop"></div>
@@ -365,7 +365,7 @@
                     <div class="projectTool_item">Bootstrap</div>
                     <div class="projectTool_item">Messenger</div>
                 </div>
-                <button class="btn_projectView">Request Demo</button>
+                <button onclick="popUpProjectDemo()" class="btn_projectView">Request Demo</button>
             </div>
         </div>
     </div>
@@ -435,6 +435,16 @@
                   </form> -->
             </div>
         </div>
+    </div>
+
+    <div class="hidden">
+        <!-- Calendly inline widget begin -->
+        <!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a class="aTag_ProjectDemo" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barrera-vincentlloyd/project-demo'});return false;">Schedule time with me</a>
+<!-- Calendly link widget end -->
+        <!-- Calendly inline widget end -->
     </div>
    
     <footer class="footer">

@@ -553,6 +553,10 @@ ul.nav-links li a {
     width: 83.7%;
 }
 
+.btn_projectView:hover {
+    cursor: pointer;
+}
+
 .projectTool_item {
     background-color: #2a3443;
     font-size: 0.8rem;
