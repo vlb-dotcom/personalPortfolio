@@ -439,6 +439,11 @@ ul.nav-links li a {
     background-color: #157efb !important;
 }
 
+.pGithub {
+    width: 70px;
+    background-color: #8a8a8a !important;
+}
+
 .pReact {
     width: 30px;
     background-color: #61dafb !important;
@@ -1095,6 +1100,11 @@ body.show-scrollbar {
     .pSQL {
         width: 50px;
         background-color: #157efb;
+    }
+
+    .pGithub {
+        width: 50px;
+        background-color: #8a8a8a;
     }
     
     .pReact {
